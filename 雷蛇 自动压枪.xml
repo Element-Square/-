@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Macro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>自动压枪</Name>
+  <Guid>a045b227-46a7-41dc-a9a5-f66858ed745b</Guid>
+  <MacroEvents>
+    <!-- 按下左键时开始 -->
+    <MacroEvent>
+      <Type>2</Type>
+      <MouseEvent>
+        <MouseButton>1</MouseButton>
+        <State>0</State> <!-- 按下左键 -->
+      </MouseEvent>
+    </MacroEvent>
+
+    <!-- 第一次移动 -->
+    <MacroEvent>
+      <Type>3</Type>
+      <MouseMovement>
+        <MouseMovementEvent>
+          <Type>3</Type>
+          <X>1</X> <!-- 轻微向右移动 -->
+          <Y>1</Y> <!-- 轻微向下移动 -->
+          <Delay>1</Delay> <!-- 控制移动速度 -->
+        </MouseMovementEvent>
+      </MouseMovement>
+    </MacroEvent>
+
+    <!-- 第二次移动 -->
+    <MacroEvent>
+      <Type>3</Type>
+      <MouseMovement>
+        <MouseMovementEvent>
+          <Type>3</Type>
+          <X>1</X> <!-- 再次轻微向右移动 -->
+          <Y>4</Y> <!-- 再次轻微向下移动 -->
+          <Delay>20</Delay> <!-- 控制移动速度 -->
+        </MouseMovementEvent>
+      </MouseMovement>
+    </MacroEvent>
+
+    <!-- 释放左键时停止 -->
+    <MacroEvent>
+      <Type>2</Type>
+      <MouseEvent>
+        <MouseButton>1</MouseButton>
+        <State>1</State> <!-- 释放左键 -->
+      </MouseEvent>
+    </MacroEvent>
+
+    <!-- 强制停止（可选） -->
+    <MacroEvent>
+      <Type>2</Type>
+      <MouseEvent>
+        <MouseButton>1</MouseButton>
+        <State>1</State> <!-- 强制停止 -->
+      </MouseEvent>
+    </MacroEvent>
+  </MacroEvents>
+  <IsFolder>false</IsFolder>
+  <FolderGuid>00000000-0000-0000-0000-000000000000</FolderGuid>
+</Macro>
