@@ -32,8 +32,8 @@
         <MouseMovementEvent>
           <Type>3</Type>
           <X>1</X> <!-- 再次轻微向右移动 -->
-          <Y>4</Y> <!-- 再次轻微向下移动 -->
-          <Delay>20</Delay> <!-- 控制移动速度 -->
+          <Y>3</Y> <!-- 再次轻微向下移动 -->
+          <Delay>30</Delay> <!-- 控制移动速度 -->
         </MouseMovementEvent>
       </MouseMovement>
     </MacroEvent>
@@ -46,15 +46,19 @@
         <State>1</State> <!-- 释放左键 -->
       </MouseEvent>
     </MacroEvent>
-
-    <!-- 强制停止（可选） -->
-    <MacroEvent>
-      <Type>2</Type>
-      <MouseEvent>
-        <MouseButton>1</MouseButton>
-        <State>1</State> <!-- 强制停止 -->
-      </MouseEvent>
+	
+	<MacroEvent>
+      <Type>3</Type>
+      <MouseMovement>
+        <MouseMovementEvent>
+          <Type>3</Type>
+          <X>0</X> <!-- 再次轻微向右移动 -->
+          <Y>0</Y> <!-- 再次轻微向下移动 -->
+          <Delay>0</Delay> <!-- 控制移动速度 -->
+        </MouseMovementEvent>
+      </MouseMovement>
     </MacroEvent>
+	
   </MacroEvents>
   <IsFolder>false</IsFolder>
   <FolderGuid>00000000-0000-0000-0000-000000000000</FolderGuid>
